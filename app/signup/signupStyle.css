@@ -1,0 +1,37 @@
+.signup .head {
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 3%;
+  text-decoration: underline;
+}
+.signup input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 0;
+}
+.signup input:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+.signup input::-webkit-outer-spin-button,
+.signup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.signup .errMsg {
+  text-align: center;
+  margin-top: -3px;
+}
+.signup .errMsg small {
+  font-weight: bold;
+  font-size: 13px;
+}
+.signup .ng-touched {
+    border-color: red;
+}
+.signup .ng-valid {
+    border-color: green;
+}

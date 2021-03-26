@@ -1,0 +1,18 @@
+.login .head {
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 8%;
+  text-decoration: underline;
+}
+.login input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 0;
+}
+.login input:focus {
+  box-shadow: none;
+  background-color: transparent;
+}

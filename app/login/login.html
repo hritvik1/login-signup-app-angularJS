@@ -1,0 +1,16 @@
+<div ng-init="initFxn()" class="login">
+  <p class="head">Login</p>
+  <div class="d-flex align-items-center flex-column justify-content-center h-100">
+    <form class="col-md-3" name="loginForm" ng-submit="login()" novalidate>
+      <div class="form-group mt-3">
+        <input class="form-control form-control-lg" placeholder="Email*" type="email" name="email" ng-model="user.email" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-lg" placeholder="Password*" type="password" name="pass" ng-model="user.pass" required>
+      </div>
+      <div class="form-group mt-5">
+        <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-info btn-lg btn-block"><i class="fas fa-sign-in-alt"></i>&nbsp;Login</button>
+      </div>
+    </form>
+  </div>
+</div>
