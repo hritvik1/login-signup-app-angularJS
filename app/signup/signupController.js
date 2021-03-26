@@ -1,4 +1,4 @@
-loginSignupApp.controller('signupCtrl',['$scope','$location', function($scope, $location){
+loginSignupApp.controller('signupCtrl',['$scope', '$location', function($scope, $location){
   $scope.user = {
     pass: "",
     confirmPass: ""
@@ -13,13 +13,15 @@ loginSignupApp.controller('signupCtrl',['$scope','$location', function($scope, $
         pass        : $scope.user.pass
     }
 
-    if($scope.signupForm.$valid) {
+    if($scope.signupForm.$valid && getItemLocal($scope.user.email) === null) {
       setItemLocal($scope.user.email, JSON.stringify(formData))
       $scope.user = {}
       $scope.signupForm.$setPristine()
       $scope.signupForm.$setUntouched()
       alert('Account Created Successfully 👍')
       $location.path('/login')
+    } else {
+      alert('Given email id is already in use!!!!!')
     }
   }
 }]);
